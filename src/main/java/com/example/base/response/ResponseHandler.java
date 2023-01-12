@@ -13,10 +13,10 @@ import java.util.concurrent.ConcurrentHashMap;
 @ResponseStatus
 @ResponseBody
 public class ResponseHandler {
-    public ResponseEntity<Object> generateResponse(String message, HttpStatus status, Object responseObj) {
+    public ResponseEntity<Object> generateResponse(Boolean success, HttpStatus status, Object responseObj) {
 
         Map<String, Object> map = new ConcurrentHashMap<>();
-        map.put("message", message);
+        map.put("success", success);
         map.put("status", status.value());
         map.put("data", responseObj);
 

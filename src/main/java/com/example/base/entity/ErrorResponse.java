@@ -9,9 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CatImage {
-    private String id;
-    private Integer width;
-    private Integer height;
-    private String url;
+public class ErrorResponse {
+    private Boolean success;
+    private String message;
 }
